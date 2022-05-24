@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "store_departments",
+  "info": {
+    "name": "storeDepartment",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "store": {
+      "model": "store",
+      "via": "store_departments"
+    },
+    "department": {
+      "model": "department",
+      "via": "store_departments"
+    },
+    "order": {
+      "type": "integer",
+      "required": true
+    },
+    "products": {
+      "collection": "product",
+      "via": "store_departments"
+    }
+  }
+}

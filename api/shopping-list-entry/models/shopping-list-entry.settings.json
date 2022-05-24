@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shopping_list_entries",
+  "info": {
+    "name": "shoppingListEntry",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "model": "product"
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "finished": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}
